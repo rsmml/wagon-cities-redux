@@ -9,8 +9,12 @@ import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
 // State and reducers
+import CitiesReducer from './reducers/cities_reducer';
+import ActiveCityReducer from './reducers/active_city_reducer';
+
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  cities: CitiesReducer,
+  activeCity: ActiveCityReducer
 });
 
 // render an instance of the component in the DOM
